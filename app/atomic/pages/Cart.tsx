@@ -11,34 +11,34 @@ const Cart = () => {
         <div>
           <p>Home / Cart</p>
         </div>
-        <section className="mt-[5rem]">
-          <header className="flex items-center  justify-between rounded-[8px] px-[30px] py-[10px] shadow-shadow">
-            <p>Product</p>
-            <p>Price</p>
-            <p>Quantity</p>
-            <p>Subtotal</p>
+        <section className="md:mt-[5rem] sm:mt-[3rem] mt-[2rem]">
+          <header className="flex items-center  justify-between rounded-[8px] sm:px-[30px] px-[15px] py-[10px] shadow-shadow">
+            <p className="sm:text-base text-[14px]">Product</p>
+            <p className="sm:text-base text-[14px]">Price</p>
+            <p className="sm:text-base text-[14px]">Quantity</p>
+            <p className="sm:text-base text-[14px]">Subtotal</p>
           </header>
-          <div className="flex items-center justify-between rounded-[8px] px-[30px] py-[10px] shadow-shadow mt-[30px]">
-            <div className="flex items-center gap-[10px]">
-              <div className="sm:w-[40px] w-[50px] h-[50px] sm:h-[40px]">
+          <div className="flex items-center justify-between rounded-[8px] sm:px-[30px] px-[15px] py-[10px] shadow-shadow sm:mt-[30px] mt-[15px]">
+            <div className="flex sm:flex-row flex-col items-center sm:gap-[10px] gap-0">
+              <div className="sm:w-[40px] w-[30px] h-[30px] sm:h-[40px]">
                 <img src="/assets/imgs/CheckoutImg/image1.png" alt="" />
               </div>
-              <p>Sofa Chair</p>
+              <p className="sm:text-base text-[11px]">Sofa Chair</p>
             </div>
-            <p>$1200</p>
-            <p>Quantity</p>
-            <p>$1240</p>
+            <p className="md:text-base sm:text-[15px] text-[11px]">$1200</p>
+            <p className="md:text-base sm:text-[15px] text-[11px]">Quantity</p>
+            <p className="md:text-base sm:text-[15px] text-[11px]">$1240</p>
           </div>
-          <div className="flex items-center justify-between rounded-[8px] px-[30px] py-[10px] shadow-shadow mt-[30px]">
-            <div className="flex items-center gap-[10px]">
-              <div className="sm:w-[40px] w-[50px] h-[50px] sm:h-[40px]">
+          <div className="flex items-center justify-between rounded-[8px] sm:px-[30px] px-[15px] py-[10px] shadow-shadow sm:mt-[30px] mt-[15px]">
+            <div className="flex sm:flex-row flex-col items-center sm:gap-[10px] gap-0">
+              <div className="sm:w-[40px]  w-[30px] h-[30px] sm:h-[40px]">
                 <img src="/assets/imgs/CheckoutImg/image1.png" alt="" />
               </div>
-              <p>Sofa Chair</p>
+              <p className="sm:text-base text-[11px]">Sofa Chair</p>
             </div>
-            <p>$1200</p>
-            <p>Quantity</p>
-            <p>$1240</p>
+            <p className="md:text-base sm:text-[15px] text-[11px]">$1200</p>
+            <p className="md:text-base sm:text-[15px] text-[11px]">Quantity</p>
+            <p className="md:text-base sm:text-[15px] text-[11px]">$1240</p>
           </div>
         </section>
         <div className="mt-[20px] flex items-center justify-between">

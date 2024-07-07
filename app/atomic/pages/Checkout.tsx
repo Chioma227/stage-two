@@ -1,9 +1,10 @@
 import Header from "../organisms/header/Header"
 import Footer from "../organisms/footer/Footer"
 import Container from "../atoms/container/Container"
-import { containerVariants } from "@/app/variant/variants"
+import { buttonVariants, containerVariants } from "@/app/variant/variants"
 import CardSection from "@/app/components/checkout/CardSection"
 import CheckoutForm from "@/app/components/checkout/CheckoutForm"
+import Button from "../atoms/button/Button"
 
 const Checkout = () => {
   return (
@@ -20,6 +21,7 @@ const Checkout = () => {
           <CheckoutForm />
           <CardSection />
         </div>
+       
       </Container>
       <Footer />
     </>

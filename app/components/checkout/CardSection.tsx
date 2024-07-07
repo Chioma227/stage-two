@@ -5,8 +5,8 @@ import { buttonVariants, containerVariants } from "@/app/variant/variants"
 
 const CardSection = () => {
     return (
-        <>
-            <div className="m:w-[40%] w-[100%] md:mt-0 mt-[5rem]">
+        <main className="w-[100%]">
+            <div className="m:w-[70%] w-[100%] md:mt-0 mt-[5rem]">
                 <section className="flex items-center justify-between">
                     <Container variant={containerVariants.FLEXED} className="md:gap-[20px] gap-[8px]">
                         <div className="sm:w-[90px] w-[50px] h-[50px] sm:h-[90px]">
@@ -18,7 +18,7 @@ const CardSection = () => {
                         <p>$1240</p>
                     </div>
                 </section>
-                <section  className="mt-[30px] flex items-center justify-between">
+                <section className="mt-[30px] flex items-center justify-between">
                     <Container variant={containerVariants.FLEXED} className="md:gap-[20px] gap-[8px]">
                         <div className="sm:w-[90px] w-[50px] h-[50px] sm:h-[90px]">
                             <img src="/assets/imgs/CheckoutImg/image2.png" alt="sofa chair" />
@@ -51,13 +51,27 @@ const CardSection = () => {
                     </div>
                 </section>
             </div>
-            {/* <div className="w-[100%]">
-                <input/>
-                <Button variant={buttonVariants.DEFAULT}>
-                        hjdk
-                </Button>
-            </div> */}
-        </>
+            <div className="w-[100%]">
+                <section>
+                    <div className="sm:flex block items-center gap-[10px]">
+                        <input type="text" placeholder="Coupon Code" className="indent-3 outline-none border-2 border-[#383838] sm:w-[300px] w-[100%] rounded-[5px] py-[7px]" />
+                        <Button variant={buttonVariants.DEFAULT} className="text-white sm:mt-0 mt-[25px] sm:block hidden">
+                            Apply Coupon
+                        </Button>
+
+                        <Button variant={buttonVariants.DEFAULT_FULL} className="text-white sm:mt-0 mt-[20px] sm:hidden block">
+                            Apply Coupon
+                        </Button>
+                        <Button variant={buttonVariants.DEFAULT_FULL} className="text-white sm:mt-0 mt-[20px] sm:hidden block">
+                            Place Order
+                        </Button>
+                    </div>
+                    <Button variant={buttonVariants.DEFAULT} className="text-white mt-[20px] mb-[30px] sm:block hidden">
+                        Place Order
+                    </Button>
+                </section>
+            </div>
+        </main>
     )
 }
 
