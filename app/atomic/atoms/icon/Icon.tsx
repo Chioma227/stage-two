@@ -1,5 +1,6 @@
 import { iconVariants } from "@/app/variant/variants"
 import clsx from "clsx"
+import Image from "next/image";
 
 
 interface iProps {
@@ -26,7 +27,7 @@ const Icon = ({ src, alt, className, variant, onClick }: iProps) => {
             break;
     }
     return (
-        <img
+        <Image
             onClick={onClick}
             alt={alt}
             width={20}

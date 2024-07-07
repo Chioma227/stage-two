@@ -41,9 +41,8 @@ const FlashSales = () => {
       </Container>
       <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] ml-[1rem] flex gap-[20px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
         {salesData.map((slug, i) => (
-          <div>
+          <div key={i}>
             <SalesCard
-              key={i}
               isFilled={false}
               imgSrc={slug.image}
               prodName={slug.name}

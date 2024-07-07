@@ -44,9 +44,9 @@ const BSProducts = () => {
             </HomeLayout>
             <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] ml-[1rem] flex gap-[20px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
                 {BSProdData.map((slug, i) => (
-                    <Link href="">
+                    <Link href="" key={i}>
                         <SalesCard
-                            key={i}
+                            
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}

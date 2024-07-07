@@ -56,9 +56,9 @@ const Products = () => {
             </div>
             <div className={`product-list ${filteredProducts.length ? 'show' : ''} grid md:grid-cols-4 grid-cols-2 gap-[10px]`} >
                 {filteredProducts.map((slug, i) => (
-                    <div className="product-item show">
+                    <div className="product-item show"  key={i}>
                         <SalesCard
-                            key={i}
+                           
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}
