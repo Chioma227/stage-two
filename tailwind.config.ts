@@ -26,9 +26,10 @@ const config: Config = {
         black90: "#181717",
         black10: "#282727",
         "dark-brown": "#5B3702",
+        inputBG:"#F5F5F5"
       },
       boxShadow:{
-        "shadow": "12px 9px 23px -10px rgba(0,0,0,0.1)"
+        "shadow":"0px 0px 24px -9px rgba(0,0,0,0.1)"
       },
       screens:{
         m:"912px",

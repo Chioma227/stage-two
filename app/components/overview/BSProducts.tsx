@@ -34,7 +34,7 @@ const BSProducts = () => {
                         <h2 className="m:text-[30px] md:text-[25px] text-[18px] font-bold text-black90 ">
                             Best Selling Products
                         </h2>
-                        <Container variant={containerVariants.FLEXED} className="gap-[7px]">
+                        <Container variant={containerVariants.FLEXED} className="md:gap-[7px] gap-[5px] md:flex hidden">
                             <Icon src='arrow-left' alt="left" variant={iconVariants.FILLED} onClick={slideLeft} />
                             <Icon src='arrow-right' alt="right" variant={iconVariants.FILLED} onClick={slideRight} />
                         </Container>
@@ -42,11 +42,10 @@ const BSProducts = () => {
                 </Container>
 
             </HomeLayout>
-            <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] ml-[1rem] flex gap-[20px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
+            <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
                 {BSProdData.map((slug, i) => (
                     <Link href="" key={i}>
                         <SalesCard
-                            
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}

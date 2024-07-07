@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { LuUser } from "react-icons/lu";
 import Icon from "../../atoms/icon/Icon";
 import { FaBars } from "react-icons/fa6";
 import { iconVariants } from "@/app/variant/variants"
@@ -29,23 +28,12 @@ const Nav = () => {
             text: "Best Sellers",
             isActive: false
         },
-        {
-            href: "",
-            text: "About Us",
-            isActive: false
-        },
-        {
-            href: "",
-            text: "Sales",
-            isActive: false
-        },
     ]
     return (
         <Container variant={containerVariants.WRAPPER} className="sm:border-b-2 border-b-0 border-b-[#b0b0b027] py-[20px]">
             <section className="flex items-center justify-between">
                 <div className="m:hidden flex items-center gap-[10px]">
                     <FaBars />
-                    <Icon src="search" alt="search" variant={iconVariants.TRANSPARENT} />
                 </div>
                 <h1 className="font-bold text-[23px] m:block hidden">Duexe</h1>
                 <Container variant={containerVariants.FLEXED} className="lg:gap-[55px] md:gap-[30px] m:flex hidden">
@@ -61,16 +49,11 @@ const Nav = () => {
                     <h1 className="font-bold text-[23px]">Duexe</h1>
                 </div>
                 <div className="flex gap-3 items-center">
-                    <Icon src="search" alt="search" variant={iconVariants.TRANSPARENT} className="m:block hidden" />
-                    <Link href="/checkout" className="m:block hidden">
-                        <Icon src="like" alt="like" variant={iconVariants.TRANSPARENT} />
-                    </Link>
+                    <Icon src="search" alt="search" variant={iconVariants.TRANSPARENT} />
                     <Link href="/cart">
                         <Icon src="shopping-cart" alt="shopping-cart" variant={iconVariants.TRANSPARENT} />
                     </Link>
-                    <Link href="">
-                        <LuUser className="text-[20px]" />
-                    </Link>
+                   
                 </div>
             </section>
         </Container>

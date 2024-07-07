@@ -28,18 +28,18 @@ const FlashSales = () => {
   return (
     <Container variant={containerVariants.DEFAULT}>
       <Container variant={containerVariants.WRAPPER}>
-        <div className='border-l-[15px] border-l-orange px-[20px]'>
-          <p className='text-[30px] font-bold text-black90'>
+        <div className='border-l-[15px] border-l-orange px-[20px] md:mb-0 mb-[20px]'>
+          <p className='md:text-[30px] text-[20px] font-bold text-black90'>
             Flash Sales
           </p>
           <Countdown targetDate={targetDate} className='gap-[10px] font-bold font-sans text-grey flex items-center' />
         </div>
-        <Container variant={containerVariants.FLEX_END} className='mt-[20px] mb-[20px] gap-[10px]'>
+        <Container variant={containerVariants.FLEX_END} className='mt-[20px] mb-[20px] md:gap-[7px] gap-[5px] md:flex hidden'>
           <Icon src='arrow-left' alt="left" variant={iconVariants.FILLED} onClick={slideLeft} />
           <Icon src='arrow-right' alt="right" variant={iconVariants.FILLED} onClick={slideRight} />
         </Container>
       </Container>
-      <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] ml-[1rem] flex gap-[20px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
+      <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
         {salesData.map((slug, i) => (
           <div key={i}>
             <SalesCard
@@ -54,7 +54,7 @@ const FlashSales = () => {
         ))}
       </div>
       <Container variant={containerVariants.WRAPPER} className='mt-[30px]'>
-        <Button variant={buttonVariants.DEFAULT} className='text-white'>
+        <Button variant={buttonVariants.DEFAULT} className='text-white md:text-base text-[13px]'>
           View All Products
         </Button>
       </Container>

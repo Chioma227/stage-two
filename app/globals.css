@@ -2,21 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles/global.css */
-.product-list {
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.2s ease-in-out; /* Transition for smooth fade */
-}
 
-.product-list.show {
-  opacity: 1; /* Visible state after transition */
-}
 
-.product-item {
-  opacity: 0; /* Initially hidden for individual items */
-  transition: opacity 0.1s ease-in-out; /* Transition for smooth fade */
-}
-
-.product-item.show {
-  opacity: 1; /* Visible state after transition */
+.radio-orange {
+  /* Adjust size as needed */
+  width: 20px;
+  height: 20px;
 }

@@ -39,13 +39,13 @@ const Products = () => {
 
     return (
         <HomeLayout >
-            <Container variant={containerVariants.DEFAULT} className=" mb-[50px]">
+            <Container variant={containerVariants.DEFAULT} className=" md:mb-[50px] mb-[20px]">
                 <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px]'>
                     <p className='text-orange font-semibold'>
                         Our Products
                     </p>
                 </div>
-                <h2 className="text-[30px] font-bold text-black90 mt-[10px]">
+                <h2 className="md:text-[30px] text-[20px] font-bold text-black90 mt-[10px]">
                     Explore Our Products
                 </h2>
             </Container>
@@ -54,9 +54,9 @@ const Products = () => {
                 <button onClick={() => handleFilterChange('chair')}>Chairs</button>
                 <button onClick={() => handleFilterChange('table')}>Tables</button>
             </div>
-            <div className={`product-list ${filteredProducts.length ? 'show' : ''} xs:grid md:grid-cols-4 xs:grid-cols-2 block gap-[10px]`} >
+            <div className={`product-list ${filteredProducts.length ? 'show' : ''} grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-[20px] gap-[10px]`} >
                 {filteredProducts.map((slug, i) => (
-                    <div className="product-item show xs:mb-[0] mb-[15px]" key={i}>
+                    <div className="product-item show" key={i}>
                         <SalesCard
                             isBlock={true}
                             isFilled={true}

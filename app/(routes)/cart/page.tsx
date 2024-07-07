@@ -1,10 +1,14 @@
-import { lazy, Suspense } from "react"
+import Header from "@/app/atomic/organisms/header/Header"
+import Footer from "@/app/atomic/organisms/footer/Footer"
+import Cart from "@/app/atomic/pages/Cart"
 
 const CartRoute = () => {
   return (
-    <div>
-      cart
-    </div>
+    <>
+      <Header />
+      <Cart />
+      <Footer />
+    </>
   )
 }
 

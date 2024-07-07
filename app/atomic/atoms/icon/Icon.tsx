@@ -27,11 +27,9 @@ const Icon = ({ src, alt, className, variant, onClick }: iProps) => {
             break;
     }
     return (
-        <Image
+        <img
             onClick={onClick}
             alt={alt}
-            width={20}
-            height={20}
             src={dynamicIconSrc}
             className={clsx(className, style)}
         />

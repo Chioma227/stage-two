@@ -13,6 +13,18 @@ const Button = ({ children, className, variant }: bProps) => {
         case buttonVariants.DEFAULT:
             style = clsx(className,
                 "bg-orange  whitespace-nowrap w-fit",
+                "rounded-[4px] text-[14px]  py-[9px] px-[2.3rem]"
+            )
+            break;
+        case buttonVariants.DEFAULT_FULL:
+            style = clsx(className,
+                "bg-orange whitespace-nowrap w-[100%]",
+                "rounded-[4px] text-[14px]  py-[9px] px-[2.3rem]"
+            )
+            break;
+        case buttonVariants.OUTLINED:
+            style = clsx(className,
+                "border-orange border text-orange  whitespace-nowrap w-fit",
                 "rounded-[4px] text-[14px]  py-[9px] px-[1.9rem]"
             )
             break;

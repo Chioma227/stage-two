@@ -1,5 +1,7 @@
 enum buttonVariants {
   DEFAULT,
+  OUTLINED,
+  DEFAULT_FULL,
 }
 
 enum iconVariants {
