@@ -62,7 +62,7 @@ const CardSection = () => {
                         <Button variant={buttonVariants.DEFAULT_FULL} className="text-white sm:mt-0 mt-[20px] sm:hidden block">
                             Apply Coupon
                         </Button>
-                        <Button variant={buttonVariants.DEFAULT_FULL} className="text-white sm:mt-0 mt-[20px] sm:hidden block">
+                        <Button variant={buttonVariants.DEFAULT_FULL} className="text-white mt-[15px] mb-[30px] sm:hidden block">
                             Place Order
                         </Button>
                     </div>
