@@ -31,8 +31,10 @@ const config: Config = {
         "shadow": "12px 9px 23px -10px rgba(0,0,0,0.1)"
       },
       screens:{
-        m:"918px",
-        
+        m:"912px",
+        s:"684px",
+        xs:"434px",
+
       }
     },
   },

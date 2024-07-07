@@ -15,9 +15,9 @@ const Overview = () => {
           <FlashSales />
             <BSProducts/>
             <Products/>
-            {/*  <NewIn/>
-            <ProdShowcase/> */}
-            {/* <Footer/> */}
+            {/*  <NewIn/>*/}
+            <ProdShowcase/> 
+            <Footer/>
         </div>
     )
 }

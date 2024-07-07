@@ -10,11 +10,12 @@ interface cardProps {
     prevPrice: number | string,
     badgeValue?: string | number,
     currentPrice: number | string,
+    isBlock?:boolean
 }
 
-const SalesCard = ({ imgSrc, prodName, prevPrice, currentPrice, badgeValue, isFilled }: cardProps) => {
+const SalesCard = ({ imgSrc, prodName, prevPrice, isBlock, currentPrice, badgeValue, isFilled }: cardProps) => {
     return (
-        <main className=" m:w-[300px] w-[200px] border-2 rounded-md box-border transition-all duration-75">
+        <main className={`${isBlock? "w-full " : "w-[200px]"} m:w-[300px] border-2 rounded-md box-border transition-all duration-75`}>
             <section className="h-fit p-[20px] ">
                 <div className="flex items-center justify-between">
                     {badgeValue && <p className="bg-red text-white text-[10px] py-[4px] px-[9px] rounded-md">{badgeValue}</p>}

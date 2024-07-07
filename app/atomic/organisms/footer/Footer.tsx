@@ -2,22 +2,23 @@ import React from 'react'
 
 const Footer = () => {
     return (
-
-
         <footer className="bg-dark-brown">
-            <div className="mx-auto w-full max-w-screen-xl px-[6rem] py-6 lg:py-8">
-                <div className="flex items-baseline gap-10 justify-center">
-                    <div className="mb-6 md:mb-0 text-white">
-                        <p>
+            <div className="mx-auto w-full max-w-screen-xl md:px-[7rem] sm:px-[4rem] px-[1rem] py-6 lg:py-8">
+                <div className="m:flex block items-baseline gap-10 justify-center">
+                    <div className=" text-white m:mb-0 mb-[35px]">
+                        <p className="mb-4 text-[20px] font-semibold">
                             Duexe
                         </p>
-                        <p>Subscribe</p>
-                        <p>Get 10% off your first order</p>
+                        <p className="mb-4">Subscribe</p>
+                        <p className="mb-4">Get 10% off your first order</p>
+                        <div>
+                            <input type="email" placeholder='Enter your email' className='bg-transparent w-full placeholder:text-[#ad9b8e5b] border-2 border-white rounded-md indent-2 outline-none py-[5px] px-[7px]' />
+                        </div>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Support</h2>
-                            <ul className="text-white ">
+                            <ul className="text-[#ffffffc9] ">
                                 <li className="mb-4">
                                     <a href="https://flowbite.com/" className="hover:underline">414 Summit lane, Wuse 2, Abuja</a>
                                 </li>
@@ -31,7 +32,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Account</h2>
-                            <ul className="text-white ">
+                            <ul className="text-[#ffffffc9]  ">
                                 <li className="mb-4">
                                     <a href="https://github.com/themesberg/flowbite" className="hover:underline ">My Accouny</a>
                                 </li>
@@ -48,7 +49,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Quick Link</h2>
-                            <ul className="text-white ">
+                            <ul className="text-[#ffffffc9]  ">
                                 <li className="mb-4">
                                     <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Privacy Policy</a>
                                 </li>
@@ -65,7 +66,7 @@ const Footer = () => {
                         </div>
                         <div>
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Download App</h2>
-                            <ul className="text-white ">
+                            <ul className="text-[#ffffffc9]  ">
                                 <li className="mb-4">
                                     <a href="#" className="hover:underline">Privacy Policy</a>
                                 </li>

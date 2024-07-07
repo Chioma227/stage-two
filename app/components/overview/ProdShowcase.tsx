@@ -1,7 +1,5 @@
 import Icon from "@/app/atomic/atoms/icon/Icon"
 import { iconVariants } from "@/app/variant/variants"
-import { containerVariants } from "@/app/variant/variants"
-import Container from "@/app/atomic/atoms/container/Container"
 
 interface pProp {
     icon: string,
@@ -29,10 +27,10 @@ const ProdShowcase = () => {
         },
     ]
     return (
-        <Container variant={containerVariants.FLEX_CENTER} className="py-[90px] gap-[45px]">
+        <main  className="py-[90px] gap-[45px] md:flex block md:mb-0 mb-[15px] items-center justify-center">
             {schema.map((slug, i) => {
                 return (
-                    <section key={i} className="flex items-center justify-center flex-col">
+                    <section key={i} className="flex items-center justify-center md:mb-0 mb-[25px] flex-col">
                         <div className="w-[50px] flex items-center justify-center h-[50px] bg-dark-brown rounded-full mb-[10px]">
                             <Icon src={slug.icon} variant={iconVariants.TRANSPARENT} alt={slug.title} />
                         </div>
@@ -41,7 +39,7 @@ const ProdShowcase = () => {
                     </section>
                 )
             })}
-        </Container>
+        </main>
     )
 }
 

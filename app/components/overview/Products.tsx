@@ -54,11 +54,11 @@ const Products = () => {
                 <button onClick={() => handleFilterChange('chair')}>Chairs</button>
                 <button onClick={() => handleFilterChange('table')}>Tables</button>
             </div>
-            <div className={`product-list ${filteredProducts.length ? 'show' : ''} grid md:grid-cols-4 grid-cols-2 gap-[10px]`} >
+            <div className={`product-list ${filteredProducts.length ? 'show' : ''} xs:grid md:grid-cols-4 xs:grid-cols-2 block gap-[10px]`} >
                 {filteredProducts.map((slug, i) => (
-                    <div className="product-item show"  key={i}>
+                    <div className="product-item show xs:mb-[0] mb-[15px]" key={i}>
                         <SalesCard
-                           
+                            isBlock={true}
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}
@@ -67,7 +67,7 @@ const Products = () => {
                         />
                     </div>
                 ))}
-            </div>
+            </div>  
             <Button variant={buttonVariants.DEFAULT} className="mt-[25px] text-white">
                 Load More
             </Button>
