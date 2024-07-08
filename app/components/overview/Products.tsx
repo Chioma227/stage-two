@@ -1,5 +1,5 @@
 "use client"
-import {  useState } from "react"
+import { useState } from "react"
 import Container from "@/app/atomic/atoms/container/Container"
 import { buttonVariants, containerVariants } from "@/app/variant/variants"
 import HomeLayout from "@/app/atomic/layout/HomeLayout"
@@ -61,16 +61,17 @@ const Products = () => {
                 <button onClick={() => handleFilterChange('table')} className={activeFilter === "accessories" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Accessories</button>
             </div>
             <div className={`product-list ${filteredProducts.length ? 'show' : ''} grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-[20px] gap-[10px]`} >
-                {filteredProducts.slice(0,8).map((slug, i) => (
-                    <Link href={`/product/${slug.id}`} className="product-item show" key={i}>
+                {filteredProducts.slice(0, 8).map((slug, i) => (
+                    <div className="product-item show" key={i}>
                         <SalesCard
+                            href={`/product/${slug.id}`}
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}
                             prevPrice={slug.prevPrice}
                             currentPrice={slug.slashPrice}
                         />
-                    </Link>
+                    </div>
                 ))}
             </div>
             <Button variant={buttonVariants.DEFAULT} className="mt-[25px] text-white">

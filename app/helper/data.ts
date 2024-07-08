@@ -1,118 +1,160 @@
 const salesData = [
   {
+    id: 1,
     image: "/assets/imgs/FSImgs/image1.png",
     name: "Kabir Chair",
     slashPrice: "120",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 2,
     image: "/assets/imgs/FSImgs/image2.png",
     name: "Asara Chair",
     slashPrice: "110",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 3,
     image: "/assets/imgs/FSImgs/image3.png",
     name: "Chidi Chair",
     slashPrice: "120",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 4,
     image: "/assets/imgs/FSImgs/image44.png",
     name: "Zadok Chair",
     slashPrice: "110",
     prevPrice: "180",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 5,
     image: "/assets/imgs/FSImgs/image5.png",
     name: "Lanre Chair",
     slashPrice: "110",
     prevPrice: "170",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 6,
     image: "/assets/imgs/FSImgs/image6.png",
     name: "Ezra Chair",
     slashPrice: "100",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 7,
     image: "/assets/imgs/FSImgs/image6.png",
     name: "Ezra Chair",
     slashPrice: "100",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 8,
     image: "/assets/imgs/FSImgs/image6.png",
     name: "Ezra Chair",
     slashPrice: "100",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
 ];
 
 const BSProdData = [
   {
+    id: 1,
     image: "/assets/imgs/BSPImgs/image1.png",
     name: "Kabir Chair",
     slashPrice: "120",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 2,
     image: "/assets/imgs/BSPImgs/image2.png",
     name: "Asara Chair",
     slashPrice: "110",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 3,
     image: "/assets/imgs/BSPImgs/image3.png",
     name: "Chidi Chair",
     slashPrice: "120",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 4,
     image: "/assets/imgs/BSPImgs/image4.png",
     name: "Zadok Chair",
     slashPrice: "110",
     prevPrice: "180",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 5,
     image: "/assets/imgs/BSPImgs/image5.png",
     name: "Lanre Chair",
     slashPrice: "110",
     prevPrice: "170",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
+    id: 6,
     image: "/assets/imgs/BSPImgs/image6.png",
     name: "Ezra Chair",
     slashPrice: "100",
     prevPrice: "160",
     rating: "",
     badgeValue: "-20%",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
 ];
 
@@ -126,7 +168,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 2,
@@ -137,7 +180,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 3,
@@ -148,7 +192,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "table",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 4,
@@ -159,7 +204,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 5,
@@ -170,7 +216,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "table",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 6,
@@ -181,7 +228,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "table",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 7,
@@ -192,7 +240,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "table",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 8,
@@ -203,7 +252,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 9,
@@ -214,7 +264,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 10,
@@ -225,7 +276,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 11,
@@ -236,7 +288,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 12,
@@ -247,7 +300,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 13,
@@ -258,7 +312,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 14,
@@ -269,7 +324,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 15,
@@ -280,7 +336,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 16,
@@ -291,7 +348,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 17,
@@ -302,7 +360,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 18,
@@ -313,7 +372,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 19,
@@ -324,7 +384,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 20,
@@ -335,7 +396,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 21,
@@ -346,7 +408,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 22,
@@ -357,7 +420,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
   {
     id: 23,
@@ -368,7 +432,8 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-     description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?"
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
   },
 ];
 

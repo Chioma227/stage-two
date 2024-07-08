@@ -44,15 +44,16 @@ const BSProducts = () => {
             </HomeLayout>
             <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
                 {BSProdData.map((slug, i) => (
-                    <Link href="" key={i}>
+                    <div key={i}>
                         <SalesCard
+                        href={`/product/${slug.id}`}
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}
                             prevPrice={slug.prevPrice}
                             currentPrice={slug.slashPrice}
                         />
-                    </Link>
+                    </div>
                 ))}
             </div>
         </div>
