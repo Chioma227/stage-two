@@ -22,7 +22,7 @@ const BSProducts = () => {
         slider.scrollLeft = slider.scrollLeft + 300;
     };
     return (
-        <>
+        <div id="bestsellers">
             <HomeLayout >
                 <Container variant={containerVariants.DEFAULT} className="border-t-2 border-t-[#b0b0b027] mb-[50px]">
                     <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px] mb-[10px]'>
@@ -55,7 +55,7 @@ const BSProducts = () => {
                     </Link>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 

@@ -17,7 +17,7 @@ const Checkout = () => {
         <h2 className='sm:text-[30px] text-[20px] mb-[30px] font-medium'>
           Billing Details
         </h2>
-        <div className="md:flex block m:gap-[7rem] md:gap-[5rem]">
+        <div className="lg:flex block m:gap-[7rem] md:gap-[5rem] mb-[40px]">
           <CheckoutForm />
           <CardSection />
         </div>

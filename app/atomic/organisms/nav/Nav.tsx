@@ -14,17 +14,17 @@ interface nav {
 const Nav = () => {
     const navLinks: nav[] = [
         {
-            href: "",
+            href: "/",
             text: "Shop",
             isActive: true
         },
         {
-            href: "",
+            href: "#newin",
             text: "New In",
             isActive: false
         },
         {
-            href: "",
+            href: "#bestsellers",
             text: "Best Sellers",
             isActive: false
         },

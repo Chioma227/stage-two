@@ -1,4 +1,6 @@
 import React from 'react'
+import Icon from '../../atoms/icon/Icon'
+import { iconVariants } from '@/app/variant/variants'
 
 const Footer = () => {
     return (
@@ -10,7 +12,8 @@ const Footer = () => {
                             Duexe
                         </p>
                         <p className="mb-4">Be the first to know about our app</p>
-                        <div>
+                        <div className='relative'>
+                            <Icon variant={iconVariants.TRANSPARENT} className='cursor-pointer absolute top-[6px] right-[5px]' src='icon-send' alt='send'/>
                             <input type="email" placeholder='Enter your email' className='bg-transparent w-full placeholder:text-[#ad9b8e5b] border-2 border-white rounded-md indent-2 outline-none py-[5px] px-[7px]' />
                         </div>
                     </div>

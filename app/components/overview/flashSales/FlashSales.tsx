@@ -40,10 +40,10 @@ const FlashSales = () => {
         </Container>
       </Container>
       <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
-        {salesData.map((slug, i) => (
+        {salesData.slice(0,6).map((slug, i) => (
           <div key={i}>
             <SalesCard
-              isFilled={false}
+              isFilled={true}
               imgSrc={slug.image}
               prodName={slug.name}
               prevPrice={slug.prevPrice}

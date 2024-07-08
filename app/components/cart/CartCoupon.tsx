@@ -17,14 +17,14 @@ const CartCoupon = () => {
             <section className="lg:w-[30%] md:w-[50%] lg:mt-0 mt-[30px] border-2 border-black p-[20px]">
                 <p>Cart Total</p>
                 <div className="flex items-center justify-between border-[#82828267] border-b-2 py-[10px]">
-                    <p>Subtotal:</p>
+                    <p>Total:</p>
                     <p>$3240</p>
                 </div>
                 <div className="flex items-center justify-between border-[#82828267] border-b-2 py-[10px]">
                     <p>Shipping:</p>
                     <p>Free</p>
                 </div>
-                <div className="flex items-center justify-between border-[#82828267] border-b-2 py-[10px]">
+                <div className="flex items-center justify-between  py-[10px]">
                     <p>Total:</p>
                     <p>$3240</p>
                 </div>

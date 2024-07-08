@@ -29,7 +29,9 @@ const config: Config = {
         inputBG:"#F5F5F5"
       },
       boxShadow:{
-        "shadow":"0px 0px 24px -9px rgba(0,0,0,0.1)"
+        "shadow":"0px 0px 5px 0px rgba(0,0,0,0.2)",
+        "shadow-2": "0px 0px 13px -5px rgba(0,0,0,0.1)",
+        "shadow_md":"0px 0px 13px -7px rgba(0,0,0,0.2)",
       },
       screens:{
         m:"912px",

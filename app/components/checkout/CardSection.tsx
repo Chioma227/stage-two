@@ -6,9 +6,9 @@ import { buttonVariants, containerVariants } from "@/app/variant/variants"
 const CardSection = () => {
     return (
         <main className="w-[100%]">
-            <div className="m:w-[70%] w-[100%] md:mt-0 mt-[5rem]">
+            <div className="lg:w-[70%] w-[100%] lg:mt-0 mt-[5rem]">
                 <section className="flex items-center justify-between">
-                    <Container variant={containerVariants.FLEXED} className="md:gap-[20px] gap-[8px]">
+                    <Container variant={containerVariants.FLEXED} className="md:gap-[20px] gap-[8px] ">
                         <div className="sm:w-[90px] w-[50px] h-[50px] sm:h-[90px]">
                             <img src="/assets/imgs/CheckoutImg/image1.png" alt="sofa chair" />
                         </div>
