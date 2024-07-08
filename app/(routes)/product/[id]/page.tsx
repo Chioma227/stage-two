@@ -10,6 +10,7 @@ import { buttonVariants } from "@/app/variant/variants";
 import Header from "@/app/atomic/organisms/header/Header";
 import Footer from "@/app/atomic/organisms/footer/Footer";
 import Container from "@/app/atomic/atoms/container/Container";
+import SalesCard from "@/app/atomic/templates/SalesCard";
 import { containerVariants, iconVariants } from "@/app/variant/variants";
 
 
@@ -53,7 +54,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
             <Header />
             <Container variant={containerVariants.WRAPPER}>
                 <div className="mt-[4rem]">
-                
+
                     <p className="text-[#adadad] sm:text-[14px] text-[12px] sm:mt-[40px] mt-[25px] sm:mb-[40px] mb-[0px]">Home / Category/ Chair / <span className='text-black'>{product.name}</span></p>
                 </div>
                 <section className="lg:flex block items-start justify-between mt-[5rem]">
@@ -100,7 +101,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                                     </div>
                                 </Container>
                                 <Container variant={containerVariants.FLEXED} className=" gap-[10px] py-[20px] sm:px-[20px] px-[10px]">
-                                    <Icon variant={iconVariants.TRANSPARENT} src="icon-return" alt="return-icon" className="sm:w-[40px] w-[30px]"/>
+                                    <Icon variant={iconVariants.TRANSPARENT} src="icon-return" alt="return-icon" className="sm:w-[40px] w-[30px]" />
                                     <div>
                                         <p className="font-medium sm:text-base text-[13px]">Return Delivery</p>
                                         <p className="sm:text-[14px] text-[10px] font-medium">Free 30 days delivery returns <a href="" className="underline">Details</a></p>
@@ -111,12 +112,25 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                     </section>
                 </section>
                 <section>
-                <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px]'>
-                    <p className='text-orange font-semibold'>
-                        Related Products
-                    </p>
-                </div>
-                    {}
+                    <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px]'>
+                        <p className='text-orange font-semibold'>
+                            Related Products
+                        </p>
+                    </div>
+                    <div className="lg:flex justify-between md:grid-cols-3 grid grid-cols-2 md:gap-[20px] gap-[10px] mt-[10px] mb-[5rem]">
+                        {products.slice(18, 22).map((slug, i) => (
+                            <div key={i}>
+                                <SalesCard
+                                    href="/"
+                                    isFilled={true}
+                                    imgSrc={slug.image}
+                                    prodName={slug.name}
+                                    prevPrice={slug.prevPrice}
+                                    currentPrice={slug.slashPrice}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </section>
             </Container>
             <Footer />

@@ -6,6 +6,7 @@ import { iconVariants } from "@/app/variant/variants"
 import Container from "../../atoms/container/Container"
 import { containerVariants } from "@/app/variant/variants"
 import { useContext } from "react";
+
 import CartContext from "@/app/helper/cartContext"
 
 
@@ -24,8 +25,8 @@ const Nav = () => {
             isActive: true
         },
         {
-            href: "#newin",
-            text: "New In",
+            href: "#flashsales",
+            text: "Flash Sales",
             isActive: false
         },
         {
@@ -38,9 +39,6 @@ const Nav = () => {
     return (
         <Container variant={containerVariants.WRAPPER} className="sm:border-b-2 border-b-0 border-b-[#b0b0b027] py-[20px]">
             <section className="flex items-center justify-between">
-                <div className="m:hidden flex items-center gap-[10px]">
-                    <FaBars />
-                </div>
                 <h1 className="font-bold text-[23px] m:block hidden">Duexe</h1>
                 <Container variant={containerVariants.FLEXED} className="lg:gap-[55px] md:gap-[30px] m:flex hidden">
                     {navLinks.map((slug, i) => {

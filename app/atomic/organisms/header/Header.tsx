@@ -1,6 +1,7 @@
 import Nav from "../nav/Nav"
 import Container from "../../atoms/container/Container"
 import { containerVariants } from "@/app/variant/variants"
+import { LuChevronDown } from "react-icons/lu";
 
 const Header = () => {
     return (
@@ -10,9 +11,10 @@ const Header = () => {
                     <p className="sm:text-base text-[9px] w-full text-center">
                         Summer Sale For All Dining Set. Free Express Delivery - OFF 50%!
                     </p>
-                <p className="md:block hidden">
-                    English
-                </p>
+                <div className="md:flex items-center hidden">
+                    <p>English</p>
+                    <LuChevronDown />
+                </div>
             </Container>
             <Nav />
         </>

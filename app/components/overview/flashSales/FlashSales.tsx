@@ -28,7 +28,7 @@ const FlashSales = () => {
   };
 
   return (
-    <Container variant={containerVariants.DEFAULT}>
+    <Container variant={containerVariants.DEFAULT} id='flashsales'>
       <Container variant={containerVariants.WRAPPER}>
         <div className='border-l-[15px] border-l-orange px-[20px] md:mb-0 mb-[20px]'>
           <p className='md:text-[30px] text-[20px] font-bold text-black90'>
@@ -71,7 +71,7 @@ const FlashSales = () => {
           </div>
         ))}
       </div>}
-      <Container variant={containerVariants.WRAPPER} className='mt-[30px]'>
+      <Container variant={containerVariants.WRAPPER} className='mt-[30px] md:block hidden'>
         <Button onClick={()=>setShow(!show)} variant={buttonVariants.DEFAULT} className='text-white md:text-base text-[13px]'>
           View All Products
         </Button>

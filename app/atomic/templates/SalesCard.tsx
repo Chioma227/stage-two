@@ -55,9 +55,9 @@ const SalesCard = ({ imgSrc, href, prodName, prevPrice, currentPrice, badgeValue
             <section className={isFilled ? "bg-grey10 md:p-[20px] p-[10px] " : "bg-transparent md:p-[20px] p-[10px] "}>
                 <div className="md:mb-[9px] mb-[5px] flex items-center justify-between">
                     <p className="sm:text-base text-[10px] font-semibold whitespace-nowrap">{prodName}</p>
-                    <div onClick={handleAddToCart} className="bg-orange cursor-pointer sm:w-[40px] w-[25px] h-[25px] sm:h-[40px] rounded-full flex items-center justify-center text-white">
+                    <Link href={href} onClick={handleAddToCart} className="bg-orange cursor-pointer sm:w-[40px] w-[25px] h-[25px] sm:h-[40px] rounded-full flex items-center justify-center text-white">
                         <Icon src="shop-bag" alt="" variant={iconVariants.TRANSPARENT} className="text-white w-[20px]" />
-                    </div>
+                    </Link>
                 </div>
                 <Container variant={containerVariants.FLEXED} className="gap-[6px] md:mb-[9px] mb-[5px]">
                     <p className="text-red font-medium md:text-base text-[13px]">${currentPrice}</p>

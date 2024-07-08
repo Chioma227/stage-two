@@ -12,6 +12,7 @@ import Header from "@/app/atomic/organisms/header/Header";
 import Footer from "@/app/atomic/organisms/footer/Footer";
 import Container from "@/app/atomic/atoms/container/Container";
 import { containerVariants, iconVariants } from "@/app/variant/variants";
+import SalesCard from "@/app/atomic/templates/SalesCard";
 
 
 interface Product {
@@ -112,12 +113,25 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                     </section>
                 </section>
                 <section>
-                <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px]'>
-                    <p className='text-orange font-semibold'>
-                        Related Products
-                    </p>
-                </div>
-                    {}
+                    <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px]'>
+                        <p className='text-orange font-semibold'>
+                            Related Products
+                        </p>
+                    </div>
+                    <div className="lg:flex justify-between md:grid-cols-3 grid grid-cols-2 md:gap-[20px] gap-[10px] mb-[5rem] mt-[10px]">
+                        {salesData.slice(1, 5).map((slug, i) => (
+                            <div key={i}>
+                                <SalesCard
+                                    href="/"
+                                    isFilled={true}
+                                    imgSrc={slug.image}
+                                    prodName={slug.name}
+                                    prevPrice={slug.prevPrice}
+                                    currentPrice={slug.slashPrice}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </section>
             </Container>
             <Footer />
