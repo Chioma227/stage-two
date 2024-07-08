@@ -1,7 +1,7 @@
 import Button from "@/app/atomic/atoms/button/Button"
 import Container from "@/app/atomic/atoms/container/Container"
 import { buttonVariants, containerVariants } from "@/app/variant/variants"
-
+import Link from "next/link"
 
 const CardSection = () => {
     return (
@@ -62,13 +62,17 @@ const CardSection = () => {
                         <Button variant={buttonVariants.DEFAULT_FULL} className="text-white sm:mt-0 mt-[20px] sm:hidden block">
                             Apply Coupon
                         </Button>
+                       <Link href="/">
                         <Button variant={buttonVariants.DEFAULT_FULL} className="text-white mt-[15px] mb-[30px] sm:hidden block">
                             Place Order
                         </Button>
+                    </Link>
                     </div>
+                   <Link href="/">
                     <Button variant={buttonVariants.DEFAULT} className="text-white mt-[20px] mb-[30px] sm:block hidden">
                         Place Order
                     </Button>
+                   </Link>
                 </section>
             </div>
         </main>
@@ -76,3 +80,4 @@ const CardSection = () => {
 }
 
 export default CardSection
+
