@@ -47,23 +47,27 @@ const Countdown: React.FC<countdownProps> = ({ targetDate, className }) => {
     const renderer = () => {
         return (
             <div className={className}>
-                {/* <p>Days</p> */}
+                
                 <div>
+                    <p className='md:text-[23px] text-[15px]'>Days</p>
                     <p className='md:text-[35px] text-[20px]'>{remainingTime.days}</p>
                 </div>
                 <span className="text-orange font-bold md:text-[25px] text-[20px]">:</span>
-                {/* <p>Hours</p> */}
+                
                 <div>
+                    <p className='md:text-[23px] text-[15px]'>Hours</p>
                     <p className='md:text-[35px] text-[20px]'>{remainingTime.hours.toString().padStart(2, '0')}</p>
                 </div>
                 <span className="text-orange font-bold md:text-[25px] text-[20px]">:</span>
-                {/* <p>Minutes</p> */}
+                
                 <div>
+                    <p className='md:text-[23px] text-[15px]' >Minutes</p>
                     <p className='md:text-[35px] text-[20px]'>{remainingTime.minutes.toString().padStart(2, '0')}</p>
                 </div>
                 <span className="text-orange font-bold md:text-[25px] text-[20px]">:</span>
-                {/* <p>Seconds</p> */}
+                
                 <div>
+                    <p className='md:text-[23px] text-[15px]' >Seconds</p>
                     <p className='md:text-[35px] text-[20px]'>{remainingTime.seconds.toString().padStart(2, '0')}</p>
                 </div>
             </div>
