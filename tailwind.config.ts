@@ -31,7 +31,7 @@ const config: Config = {
       boxShadow:{
         "shadow":"0px 0px 5px 0px rgba(0,0,0,0.2)",
         "shadow-2": "0px 0px 13px -5px rgba(0,0,0,0.1)",
-        "shadow_md":"0px 0px 13px -7px rgba(0,0,0,0.2)",
+        "shadow_md":"0px 0px 10px -3px rgba(0,0,0,0.3)",
       },
       screens:{
         m:"912px",

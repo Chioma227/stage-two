@@ -8,7 +8,7 @@ const Hero = () => {
         <HomeLayout>
             <Container variant={containerVariants.FLEX_BW} className='w-full '>
                 <section className='flex items-center flex-col m:mt-[0] mt-[40px]'>
-                    <h1 className='font-bold text-center md:text-[35px] m:text-[25px] text-[30px]'>
+                    <h1 className='font-bold text-center md:text-[35px] m:text-[30px] text-[30px]'>
                         Elevate Your Space<br />
                         Today
                     </h1>

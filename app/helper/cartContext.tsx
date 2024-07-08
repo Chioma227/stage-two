@@ -1,11 +1,16 @@
+"use client"
 import  { createContext, useState } from 'react';
 
 interface Product {
   id: number;
-  name: string;
   image: string;
-  price: number;
-  // ... other product properties
+  name: string;
+  rating: string;
+  badgeValue: string;
+  prevPrice: string;
+  category: string;
+  slashPrice: string;
+  description: string;
 }
 
 

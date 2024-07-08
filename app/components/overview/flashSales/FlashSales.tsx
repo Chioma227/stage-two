@@ -6,13 +6,15 @@ import { buttonVariants, iconVariants } from '@/app/variant/variants';
 import SalesCard from '@/app/atomic/templates/SalesCard';
 import { containerVariants } from '@/app/variant/variants';
 import Container from '@/app/atomic/atoms/container/Container';
-import Link from 'next/link';
 import Button from '@/app/atomic/atoms/button/Button';
+import { useState } from 'react';
 
 
 
 const FlashSales = () => {
+  const [show, setShow] = useState(false)
 
+  
   const targetDate = new Date('2024-07-14T00:00:00');
 
   const slideLeft = () => {
@@ -39,7 +41,7 @@ const FlashSales = () => {
           <Icon src='arrow-right' alt="right" variant={iconVariants.FILLED} onClick={slideRight} />
         </Container>
       </Container>
-      <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
+      <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:mt-0 mt-[34px] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
         {salesData.slice(0, 6).map((slug, i) => (
           <div key={i}>
             <SalesCard
@@ -54,8 +56,23 @@ const FlashSales = () => {
           </div>
         ))}
       </div>
+     {show && <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:mt-0 mt-[34px] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
+        {salesData.slice(0, 6).map((slug, i) => (
+          <div key={i}>
+            <SalesCard
+              href={`/flashsales-product/${slug.id}`}
+              isFilled={true}
+              imgSrc={slug.image}
+              prodName={slug.name}
+              prevPrice={slug.prevPrice}
+              badgeValue={slug.badgeValue}
+              currentPrice={slug.slashPrice}
+            />
+          </div>
+        ))}
+      </div>}
       <Container variant={containerVariants.WRAPPER} className='mt-[30px]'>
-        <Button variant={buttonVariants.DEFAULT} className='text-white md:text-base text-[13px]'>
+        <Button onClick={()=>setShow(!show)} variant={buttonVariants.DEFAULT} className='text-white md:text-base text-[13px]'>
           View All Products
         </Button>
       </Container>

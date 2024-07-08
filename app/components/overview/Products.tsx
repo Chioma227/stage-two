@@ -30,6 +30,7 @@ const Products = () => {
 
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [activeFilter, setActiveFilter] = useState<string | null>(null);
+    const [show, setShow] = useState(false)
 
     const handleFilterChange = (category: string | null) => {
         setSelectedCategory(category);
@@ -55,10 +56,10 @@ const Products = () => {
             <div className="flex flex-wrap  items-center sm:gap-4 gap-2 md:mb-[50px] mb-[20px]">
                 <button onClick={() => handleFilterChange(null)} className={activeFilter === null ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent w-fit whitespace-nowrap sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>All</button>
                 <button onClick={() => handleFilterChange('chair')} className={activeFilter === "chair" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Chairs</button>
-                <button onClick={() => handleFilterChange('table')} className={activeFilter === "table" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Dining Set</button>
-                <button onClick={() => handleFilterChange('table')} className={activeFilter === "sofa" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Sofa Set</button>
-                <button onClick={() => handleFilterChange('table')} className={activeFilter === "side-table" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Side Table</button>
-                <button onClick={() => handleFilterChange('table')} className={activeFilter === "accessories" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Accessories</button>
+                <button onClick={() => handleFilterChange('d-set')} className={activeFilter === "d-set" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Dining Set</button>
+                <button onClick={() => handleFilterChange('sofa')} className={activeFilter === "sofa" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Sofa Set</button>
+                <button onClick={() => handleFilterChange('table')} className={activeFilter === "table" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Side Table</button>
+                <button onClick={() => handleFilterChange('accessories')} className={activeFilter === "accessories" ? 'bg-orange text-white w-fit sm:px-[25px] px-[15px] py-[6px] whitespace-nowrap rounded-full sm:text-[14px] text-[10px]' : 'border-orange border bg-transparent whitespace-nowrap w-fit sm:px-[25px] px-[15px] py-[6px] rounded-full sm:text-[14px] text-[10px]'}>Accessories</button>
             </div>
             <div className={`product-list ${filteredProducts.length ? 'show' : ''} grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-[20px] gap-[10px]`} >
                 {filteredProducts.slice(0, 8).map((slug, i) => (
@@ -74,7 +75,21 @@ const Products = () => {
                     </div>
                 ))}
             </div>
-            <Button variant={buttonVariants.DEFAULT} className="mt-[25px] text-white">
+           {show && <div className={`product-list ${filteredProducts.length ? 'show' : ''} grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-[20px] gap-[10px]`} >
+                {filteredProducts.slice(0, 12).map((slug, i) => (
+                    <div className="product-item show" key={i}>
+                        <SalesCard
+                            href={`/product/${slug.id}`}
+                            isFilled={true}
+                            imgSrc={slug.image}
+                            prodName={slug.name}
+                            prevPrice={slug.prevPrice}
+                            currentPrice={slug.slashPrice}
+                        />
+                    </div>
+                ))}
+            </div>}
+            <Button onClick={()=>setShow(!show)} variant={buttonVariants.DEFAULT} className="mt-[25px] text-white">
                 Load More
             </Button>
         </HomeLayout>

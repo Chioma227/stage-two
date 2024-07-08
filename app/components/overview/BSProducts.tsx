@@ -42,11 +42,11 @@ const BSProducts = () => {
                 </Container>
 
             </HomeLayout>
-            <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
+            <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px]  gap-[15px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
                 {BSProdData.map((slug, i) => (
                     <div key={i}>
                         <SalesCard
-                        href={`/product/${slug.id}`}
+                            href={`/product/${slug.id}`}
                             isFilled={true}
                             imgSrc={slug.image}
                             prodName={slug.name}

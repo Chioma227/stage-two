@@ -5,9 +5,10 @@ interface bProps {
     className?: string,
     variant: buttonVariants,
     children: string | React.ReactNode,
+    onClick?: ()=> void
 }
 
-const Button = ({ children, className, variant }: bProps) => {
+const Button = ({ children, onClick, className, variant }: bProps) => {
     let style;
     switch (variant) {
         case buttonVariants.DEFAULT:
