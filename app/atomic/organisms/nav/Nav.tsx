@@ -39,9 +39,9 @@ const Nav = () => {
     return (
         <Container variant={containerVariants.WRAPPER} className="sm:border-b-2 border-b-0 border-b-[#b0b0b027] py-[20px]">
             <section className="flex items-center justify-between">
-            <Link href="/">
+        
                 <h1 className="font-bold text-[23px] m:block hidden">Duexe</h1>
-                </Link>
+            
                 <Container variant={containerVariants.FLEXED} className="lg:gap-[55px] md:gap-[30px] m:flex hidden">
                     {navLinks.map((slug, i) => {
                         return (
