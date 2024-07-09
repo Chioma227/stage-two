@@ -63,12 +63,17 @@ const SalesCard = ({ imgSrc, href, prodName, prevPrice, currentPrice, badgeValue
                     <p className="text-red font-medium md:text-base text-[13px]">${currentPrice}</p>
                     <p className=" line-through text-grey font-medium md:text-base text-[13px]">${prevPrice}</p>
                 </Container>
+                <Container variant={containerVariants.FLEXED} className="gap-[10px]">
                 <Container variant={containerVariants.FLEXED}>
                     <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
                     <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
                     <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
                     <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
                     <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
+                </Container>
+                    <p className="sm:text-base text-[13px] text-grey">
+                       (85)
+                    </p>
                 </Container>
             </section>
 
