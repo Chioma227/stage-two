@@ -25,7 +25,7 @@ const Button = ({ children, onClick, className, variant }: bProps) => {
             break;
         case buttonVariants.OUTLINED:
             style = clsx(className,
-                "border-orange border text-orange  whitespace-nowrap w-fit",
+                "border-orange hover:bg-[#FF8933] hover:text-white border text-orange  whitespace-nowrap w-fit",
                 "rounded-[4px] text-[14px]  py-[9px] sm:px-[2.3rem] px-[2rem]"
             )
             break;
