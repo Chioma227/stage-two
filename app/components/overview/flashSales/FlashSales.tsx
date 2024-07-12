@@ -34,7 +34,7 @@ const FlashSales = () => {
           <p className='md:text-[30px] text-[20px] font-bold text-black90'>
             Flash Sales
           </p>
-          <Countdown targetDate={targetDate} className='gap-[10px] font-bold font-sans text-grey flex items-center' />
+          <Countdown targetDate={targetDate} className='gap-[10px] font-bold font-sans text-grey flex items-center md:mt-[25px] mt-[15px]' />
         </div>
         <Container variant={containerVariants.FLEX_END} className='mt-[20px] mb-[20px] md:gap-[7px] gap-[5px] md:flex hidden'>
           <Icon src='arrow-left' alt="left" variant={iconVariants.FILLED} onClick={slideLeft} />

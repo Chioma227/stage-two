@@ -8,7 +8,7 @@ const salesData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const salesData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      "Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space."
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const salesData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const salesData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ const salesData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ const salesData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
 ];
 
@@ -99,7 +99,7 @@ const BSProdData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 2,
@@ -110,7 +110,7 @@ const BSProdData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      "Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.  ",
   },
   {
     id: 3,
@@ -121,7 +121,7 @@ const BSProdData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 4,
@@ -143,7 +143,7 @@ const BSProdData = [
     rating: "",
     badgeValue: "-20%",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      "Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.  ",
   },
   {
     id: 6,
@@ -169,7 +169,7 @@ const products = [
     badgeValue: "-20%",
     category: "sofa",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 2,
@@ -181,7 +181,7 @@ const products = [
     badgeValue: "-20%",
     category: "d-set",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 3,
@@ -205,7 +205,7 @@ const products = [
     badgeValue: "-20%",
     category: "table",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 5,
@@ -217,7 +217,7 @@ const products = [
     badgeValue: "-20%",
     category: "table",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 6,
@@ -241,7 +241,7 @@ const products = [
     badgeValue: "-20%",
     category: "chair",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
 
   {
@@ -278,7 +278,7 @@ const products = [
     badgeValue: "-20%",
     category: "sofa",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 11,
@@ -421,8 +421,7 @@ const products = [
     rating: "",
     badgeValue: "-20%",
     category: "chair",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+    description: " Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space. ",
   },
   {
     id: 7,
@@ -434,7 +433,7 @@ const products = [
     badgeValue: "-20%",
     category: "chair",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit provident est quo officia sed blanditiis autem minima maxime aut assumenda, molestias eveniet voluptate nobis a laborum doloribus non odio sapiente?",
+      "Enjoy unparalleled comfort and timeless elegance with our product. It is meticulously crafted to perfection, and combines sophisticated design with the finest materials, making it the quintessential addition to any luxurious living space.",
   },
 ];
 
