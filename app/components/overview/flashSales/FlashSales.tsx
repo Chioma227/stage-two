@@ -48,6 +48,7 @@ const FlashSales = () => {
               href={`/flashsales-product/${slug.id}`}
               isFilled={true}
               imgSrc={slug.image}
+              product={slug}
               prodName={slug.name}
               prevPrice={slug.prevPrice}
               badgeValue={slug.badgeValue}
@@ -63,6 +64,7 @@ const FlashSales = () => {
               href={`/flashsales-product/${slug.id}`}
               isFilled={true}
               imgSrc={slug.image}
+              product={slug}
               prodName={slug.name}
               prevPrice={slug.prevPrice}
               badgeValue={slug.badgeValue}

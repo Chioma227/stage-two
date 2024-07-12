@@ -7,8 +7,6 @@ import Container from "../../atoms/container/Container"
 import { containerVariants } from "@/app/variant/variants"
 import { useContext } from "react";
 
-import CartContext from "@/app/helper/cartContext"
-
 
 interface nav {
     href: string,
@@ -17,7 +15,7 @@ interface nav {
 }
 
 const Nav = () => {
-    const { cartItems } = useContext(CartContext)
+
     const navLinks: nav[] = [
         {
             href: "/",
@@ -55,9 +53,9 @@ const Nav = () => {
                 <div className="flex gap-3 items-center">
                     <Icon src="search" alt="search" variant={iconVariants.TRANSPARENT} />
                     <Link href="/cart" className="relative">
-                        <div className={`flex absolute  items-center justify-center right-0 top-[-5px] w-[20px] h-[20px] text-white text-[10px] bg-red rounded-full`}>
+                        {/* <div className={`flex absolute  items-center justify-center right-0 top-[-5px] w-[20px] h-[20px] text-white text-[10px] bg-red rounded-full`}>
                             <p>{cartItems.length}</p>
-                        </div>
+                        </div> */}
                         <Icon src="shopping-cart" alt="shopping-cart" variant={iconVariants.TRANSPARENT} />
                     </Link>
                 </div>

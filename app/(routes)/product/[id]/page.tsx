@@ -123,6 +123,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                                 <SalesCard
                                     href="/"
                                     isFilled={true}
+                                    product={slug}
                                     imgSrc={slug.image}
                                     prodName={slug.name}
                                     prevPrice={slug.prevPrice}

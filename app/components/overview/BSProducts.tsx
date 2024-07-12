@@ -48,6 +48,7 @@ const BSProducts = () => {
                         <SalesCard
                             href={`/product/${slug.id}`}
                             isFilled={true}
+                            product={slug}
                             imgSrc={slug.image}
                             prodName={slug.name}
                             prevPrice={slug.prevPrice}
