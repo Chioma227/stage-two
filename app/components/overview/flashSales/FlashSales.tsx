@@ -1,6 +1,5 @@
 "use client"
 import Countdown from './Countdown'
-import { salesData } from '../../../helper/data';
 import Icon from '@/app/atomic/atoms/icon/Icon';
 import { buttonVariants, iconVariants } from '@/app/variant/variants';
 import SalesCard from '@/app/atomic/templates/SalesCard';
@@ -27,7 +26,7 @@ const FlashSales = () => {
     slider.scrollLeft = slider.scrollLeft + 300;
   };
 
-    const { products,  fetchProducts, isLoading, error } = useProductsStore();
+    const { products,  fetchProducts } = useProductsStore();
     useEffect(() => {
         fetchProducts();
     }, [fetchProducts]);

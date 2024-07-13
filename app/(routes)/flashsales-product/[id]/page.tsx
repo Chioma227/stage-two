@@ -12,8 +12,6 @@ import Header from "@/app/atomic/organisms/header/Header";
 import Footer from "@/app/atomic/organisms/footer/Footer";
 import Container from "@/app/atomic/atoms/container/Container";
 import { containerVariants, iconVariants } from "@/app/variant/variants";
-import SalesCard from "@/app/atomic/templates/SalesCard";
-import useProductsStore from "@/app/helper/zustand/productsStore";
 
 
 interface Product {

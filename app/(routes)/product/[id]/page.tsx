@@ -41,7 +41,8 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
             .then((data) => {
                 if (data) {
                     setData(data);
-                
+                    console.log(data);
+                    
                 } else {
                     setData(null);
                 }
@@ -69,7 +70,6 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
     if (!data) {
         return <Loader/>;
     }
-
 
     return (
         <main>
@@ -138,8 +138,8 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                             Related Products
                         </p>
                     </div>
-                    <div className="lg:flex justify-between md:grid-cols-3 grid grid-cols-2 md:gap-[20px] gap-[10px] mt-[10px] mb-[5rem]">
-                        {/* {data.slice(1, 3).map((slug, i) => (
+                    {/* <div className="lg:flex justify-between md:grid-cols-3 grid grid-cols-2 md:gap-[20px] gap-[10px] mt-[10px] mb-[5rem]">
+                        {data[0?.slice(1, 4)?.map((slug, i) => (
                             <div key={i}>
                                 <SalesCard
                                     href="/"
@@ -151,8 +151,8 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
                                     current_price={slug.slashPrice}
                                 />
                             </div>
-                        ))} */}
-                    </div>
+                        ))}
+                    </div> */}
                 </section>
             </Container>
             <Footer />

@@ -2,6 +2,7 @@ import  create  from "zustand";
 
 
 interface CartItem {
+  available_quantity: number | string;
   photos: any;
   id: number;
   image: string;
@@ -32,6 +33,7 @@ const useCartStore = create<CartState>((set) => ({
       cartItems: [...state.cartItems, newItem],
       isAdded: true,
     }));
+    
   },
   setIsAdded: (isAdded: boolean) => set({ isAdded: isAdded }),
   removeItemFromCart: (itemId: number) => {

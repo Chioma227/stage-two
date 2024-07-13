@@ -24,7 +24,7 @@ const BSProducts = () => {
         slider.scrollLeft = slider.scrollLeft + 300;
     };
 
-    const { products,  fetchProducts, isLoading, error } = useProductsStore();
+    const { products,  fetchProducts} = useProductsStore();
     useEffect(() => {
         fetchProducts();
     }, [fetchProducts]);

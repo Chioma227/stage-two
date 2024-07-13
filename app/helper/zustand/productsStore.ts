@@ -41,7 +41,6 @@ const useProductsStore = create<ProductsState>((set) => ({
       .then((response) => response.json())
       .then((data) => {
         set({ products: data.items });
-        console.log(data.items);
       });
   },
 

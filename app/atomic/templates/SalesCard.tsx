@@ -37,10 +37,14 @@ const SalesCard = ({ imgSrc, href, prodName, available_quantity, current_price, 
     const hadleAddToCart = () => {
         addItemToCart({
             ...product,
-            prevPrice: "",
+            prevPrice: product.available_quantity,
             slashPrice: "",
-            photos: "",
+            photos: product.photos,
+            available_quantity: product.available_quantity
         })
+        if (isAdded) {
+            alert('Item added to cart')
+        }
         setTimeout(() => setIsAdded(false), 2000);
     }
 
