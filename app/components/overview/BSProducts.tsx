@@ -5,10 +5,12 @@ import SalesCard from "@/app/atomic/templates/SalesCard"
 import HomeLayout from "@/app/atomic/layout/HomeLayout"
 import Icon from "@/app/atomic/atoms/icon/Icon"
 import { iconVariants } from "@/app/variant/variants"
-import { BSProdData } from "../../helper/data"
+// import { BSProdData } from "../../helper/data"
 
 
 import Link from "next/link"
+import { useEffect } from "react"
+import useProductsStore from "@/app/helper/zustand/productsStore"
 
 const BSProducts = () => {
 
@@ -21,6 +23,11 @@ const BSProducts = () => {
         var slider = document.getElementById("slider2") ?? document.createElement('div');
         slider.scrollLeft = slider.scrollLeft + 300;
     };
+
+    const { products,  fetchProducts, isLoading, error } = useProductsStore();
+    useEffect(() => {
+        fetchProducts();
+    }, [fetchProducts]);
     return (
         <div id="bestsellers">
             <HomeLayout >
@@ -43,16 +50,16 @@ const BSProducts = () => {
 
             </HomeLayout>
             <div id='slider2' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:flex grid grid-cols-2 md:gap-[20px]  gap-[15px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
-                {BSProdData.map((slug, i) => (
+                {products.slice(10, 20).map((slug, i) => (
                     <div key={i}>
                         <SalesCard
                             href={`/product/${slug.id}`}
                             isFilled={true}
                             product={slug}
-                            imgSrc={slug.image}
+                            imgSrc={`https://api.timbu.cloud/images/${slug.photos[0]?.url}`}
                             prodName={slug.name}
-                            prevPrice={slug.prevPrice}
-                            currentPrice={slug.slashPrice}
+                            available_quantity={slug.available_quantity}
+                            current_price={slug.available_quantity}
                         />
                     </div>
                 ))}

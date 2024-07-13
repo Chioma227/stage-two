@@ -7,15 +7,15 @@ import SalesCard from '@/app/atomic/templates/SalesCard';
 import { containerVariants } from '@/app/variant/variants';
 import Container from '@/app/atomic/atoms/container/Container';
 import Button from '@/app/atomic/atoms/button/Button';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import useProductsStore from '@/app/helper/zustand/productsStore';
 
 
 const FlashSales = () => {
   const [show, setShow] = useState(false)
 
   
-  const targetDate = new Date('2024-07-14T00:00:00');
+  const targetDate = new Date('2024-07-17T00:00:00');
 
   const slideLeft = () => {
     const slider = document.getElementById("slider") ?? document.createElement('div');
@@ -27,6 +27,12 @@ const FlashSales = () => {
     slider.scrollLeft = slider.scrollLeft + 300;
   };
 
+    const { products,  fetchProducts, isLoading, error } = useProductsStore();
+    useEffect(() => {
+        fetchProducts();
+    }, [fetchProducts]);
+
+
   return (
     <Container variant={containerVariants.DEFAULT} id='flashsales'>
       <Container variant={containerVariants.WRAPPER}>
@@ -34,7 +40,7 @@ const FlashSales = () => {
           <p className='md:text-[30px] text-[20px] font-bold text-black90'>
             Flash Sales
           </p>
-          <Countdown targetDate={targetDate} className='gap-[10px] font-bold font-sans text-grey flex items-center md:mt-[25px] mt-[15px]' />
+          <Countdown targetDate={targetDate} className='gap-[8px] font-bold font-sans text-grey flex items-center md:mt-[15px] mt-[15px]' />
         </div>
         <Container variant={containerVariants.FLEX_END} className='mt-[20px] mb-[20px] md:gap-[7px] gap-[5px] md:flex hidden'>
           <Icon src='arrow-left' alt="left" variant={iconVariants.FILLED} onClick={slideLeft} />
@@ -42,23 +48,23 @@ const FlashSales = () => {
         </Container>
       </Container>
       <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:mt-0 mt-[34px] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
-        {salesData.slice(0, 6).map((slug, i) => (
+        {products?.slice(0, 10)?.map((slug, i) => (
           <div key={i}>
             <SalesCard
-              href={`/flashsales-product/${slug.id}`}
+              href={`/product/${slug.id}`}
               isFilled={true}
-              imgSrc={slug.image}
+              imgSrc={`https://api.timbu.cloud/images/${slug.photos[0]?.url}`}
               product={slug}
               prodName={slug.name}
-              prevPrice={slug.prevPrice}
+              available_quantity={slug.available_quantity}
               badgeValue={slug.badgeValue}
-              currentPrice={slug.slashPrice}
+              current_price={slug.available_quantity}
             />
           </div>
         ))}
       </div>
      {show && <div id='slider' className="md:ml-[7rem] sm:ml-[4rem] md:mx-0 sm:mx-[4rem] mx-[1rem] md:mt-0 mt-[34px] md:flex grid grid-cols-2 md:gap-[20px] gap-[10px] overflow-x-hidden overflow-y-hidden scroll scroll-smooth scrollbar-hide"  >
-        {salesData.slice(0, 6).map((slug, i) => (
+        {products.slice(0, 6).map((slug, i) => (
           <div key={i}>
             <SalesCard
               href={`/flashsales-product/${slug.id}`}
@@ -66,9 +72,9 @@ const FlashSales = () => {
               imgSrc={slug.image}
               product={slug}
               prodName={slug.name}
-              prevPrice={slug.prevPrice}
+              available_quantity={slug.available_quantity}
               badgeValue={slug.badgeValue}
-              currentPrice={slug.slashPrice}
+              current_price={slug.available_quantity}
             />
           </div>
         ))}

@@ -2,6 +2,7 @@ import  create  from "zustand";
 
 
 interface CartItem {
+  photos: any;
   id: number;
   image: string;
   name: string;
@@ -19,6 +20,7 @@ interface CartState {
   removeItemFromCart: (itemId: number) => void;
   clearCart: () => void;
   isAdded: boolean;
+  setIsAdded: (isAdded: boolean) => void;
 }
 
 const useCartStore = create<CartState>((set) => ({
@@ -28,21 +30,19 @@ const useCartStore = create<CartState>((set) => ({
   addItemToCart: (newItem: CartItem) => {
     set((state) => ({
       cartItems: [...state.cartItems, newItem],
+      isAdded: true,
     }));
-    set({ isAdded: true });
-
-    // const { cartItems } = state;
-    // localStorage.setItem(
-    //     'cartItems',
-    //     JSON.stringify([...state.cartItems, newItem])
-    //   );
   },
+  setIsAdded: (isAdded: boolean) => set({ isAdded: isAdded }),
   removeItemFromCart: (itemId: number) => {
     set((state) => ({
       cartItems: state.cartItems.filter((item) => item.id !== itemId),
     }));
   },
+
   clearCart: () => set({ cartItems: [] }),
 }));
+
+
 
 export default useCartStore;

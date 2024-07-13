@@ -6,17 +6,9 @@ import BSProducts from "@/app/components/overview/BSProducts"
 import FlashSales from "@/app/components/overview/flashSales/FlashSales"
 import Footer from "../organisms/footer/Footer"
 import ProdShowcase from "@/app/components/overview/ProdShowcase"
-import NewIn from "@/app/components/overview/NewIn"
-import useCartStore from "@/app/helper/zustand/cartStore"
-import { useEffect } from "react"
+
 
 const Overview = () => {
-    const { isAdded } = useCartStore()
-    useEffect(() => {
-        if (isAdded) {
-            alert("item added to cart")
-        }
-    }, [isAdded])
     return (
         <div>
             <Header />
@@ -24,7 +16,6 @@ const Overview = () => {
             <FlashSales />
             <BSProducts />
             <Products />
-            {/*  <NewIn/>*/}
             <ProdShowcase />
             <Footer />
         </div>

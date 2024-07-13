@@ -11,10 +11,11 @@ interface Product {
     name: string;
     rating: string;
     badgeValue: string;
-    prevPrice: string;
+    available_quantity: string;
     category?: string;
-    slashPrice: string;
+    current_price: string;
     description: string;
+    photos?: string[]
 }
 
 interface cardProps {
@@ -22,18 +23,25 @@ interface cardProps {
     imgSrc: string,
     prodName: string,
     isFilled: boolean,
-    prevPrice: number | string,
+    available_quantity: number | string,
     badgeValue?: string | number,
-    currentPrice: number | string,
+    current_price?: number | string,
     product: Product
 }
 
 
-const SalesCard = ({ imgSrc, href, prodName, prevPrice, currentPrice, badgeValue, isFilled, product }: cardProps) => {
+const SalesCard = ({ imgSrc, href, prodName, available_quantity, current_price, badgeValue, isFilled, product }: cardProps) => {
 
-    const { addItemToCart } = useCartStore()
+    const { addItemToCart, isAdded, setIsAdded } = useCartStore()
+
     const hadleAddToCart = () => {
-        addItemToCart({ ...product })
+        addItemToCart({
+            ...product,
+            prevPrice: "",
+            slashPrice: "",
+            photos: "",
+        })
+        setTimeout(() => setIsAdded(false), 2000);
     }
 
     return (
@@ -46,7 +54,6 @@ const SalesCard = ({ imgSrc, href, prodName, prevPrice, currentPrice, badgeValue
                     <img src={imgSrc} alt={prodName} className="md:h-[200px] h-[100px] max-w-[100%] object-fit " />
                 </div>
             </Link>
-
             <section className={isFilled ? "bg-grey10 md:p-[20px] p-[10px] " : "bg-transparent md:p-[20px] p-[10px] "}>
                 <div className="md:mb-[9px] mb-[5px] flex items-center justify-between">
                     <p className="sm:text-base text-[10px] font-semibold whitespace-nowrap">{prodName}</p>
@@ -55,19 +62,19 @@ const SalesCard = ({ imgSrc, href, prodName, prevPrice, currentPrice, badgeValue
                     </div>
                 </div>
                 <Container variant={containerVariants.FLEXED} className="gap-[6px] md:mb-[9px] mb-[5px]">
-                    <p className="text-red font-medium md:text-base text-[13px]">${currentPrice}</p>
-                    <p className=" line-through text-grey font-medium md:text-base text-[13px]">${prevPrice}</p>
+                    <p className="text-red font-medium md:text-base text-[13px]">${current_price}</p>
+                    <p className=" line-through text-grey font-medium md:text-base text-[13px]">${available_quantity}</p>
                 </Container>
                 <Container variant={containerVariants.FLEXED} className="gap-[10px]">
-                <Container variant={containerVariants.FLEXED}>
-                    <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
-                    <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
-                    <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
-                    <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
-                    <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
-                </Container>
+                    <Container variant={containerVariants.FLEXED}>
+                        <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
+                        <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
+                        <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
+                        <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
+                        <Icon variant={iconVariants.TRANSPARENT} src="star1" alt="star" />
+                    </Container>
                     <p className="sm:text-base text-[13px] text-grey">
-                       (85)
+                        (85)
                     </p>
                 </Container>
             </section>
