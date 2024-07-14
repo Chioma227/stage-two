@@ -41,7 +41,6 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
             .then((data) => {
                 if (data) {
                     setData(data);
-                    console.log(data);
                     
                 } else {
                     setData(null);
