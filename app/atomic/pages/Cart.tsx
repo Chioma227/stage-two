@@ -11,6 +11,24 @@ import { useEffect, useState } from "react"
 const Cart = () => {
   const { cartItems, removeItemFromCart, clearCart } = useCartStore()
 
+  const [totalPrice, setTotalPrice] = useState(0);
+
+
+const calculateCartTotal = () => {
+  const total = cartItems.reduce((acc, currentItem) => {
+    const itemPrice = currentItem?.available_quantity as number || 0; // Handle potential missing price
+    const itemQuantity = currentItem?.available_quantity as number || 1; // Handle potential missing quantity (default to 1)
+    return acc + (itemPrice * itemQuantity);
+  }, 0);
+  setTotalPrice(total);
+};
+
+  useEffect(() => {
+    calculateCartTotal(); 
+    console.log(totalPrice);
+  }, [cartItems]);
+
+
 
   return (
     <Container variant={containerVariants.WRAPPER}>

@@ -1,5 +1,4 @@
 import { create } from "zustand";
-// productsStore.ts
 import axios from "axios";
 
 interface Product {
@@ -25,10 +24,10 @@ interface ProductsState {
 }
 
 const initialState: ProductsState = {
+  error: null,
   products: [],
   product: null,
   isLoading: false,
-  error: null,
   fetchProducts: async () => {},
   fetchProduct:  async () => {},
 };

@@ -38,9 +38,9 @@ const Countdown: React.FC<countdownProps> = ({ targetDate, className }) => {
             const seconds = Math.floor((millisecondsRemaining % (1000 * 60)) / 1000);
 
             setRemainingTime({ days, hours, minutes, seconds });
-        }, 1000); // update time every second
+        }, 1000);
 
-        // cleanup fnc on unmount
+     
         return () => clearInterval(intervalId);
     }, [targetDate]);
 

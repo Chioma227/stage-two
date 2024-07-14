@@ -4,6 +4,8 @@ import Container from "../atoms/container/Container"
 import { containerVariants, iconVariants } from "@/app/variant/variants"
 import Link from "next/link"
 import useCartStore from "@/app/helper/zustand/cartStore"
+import { FaCheck } from "react-icons/fa6";
+import { Alert, Button, Space } from 'antd';
 
 interface Product {
     id: number;
@@ -42,9 +44,6 @@ const SalesCard = ({ imgSrc, href, prodName, available_quantity, current_price, 
             photos: product.photos,
             available_quantity: product.available_quantity
         })
-        if (isAdded) {
-            alert('Item added to cart')
-        }
         setTimeout(() => setIsAdded(false), 2000);
     }
 
@@ -65,6 +64,19 @@ const SalesCard = ({ imgSrc, href, prodName, available_quantity, current_price, 
                         <Icon src="shop-bag" alt="" variant={iconVariants.TRANSPARENT} className="text-white w-[20px]" />
                     </div>
                 </div>
+                {isAdded && <div className="fixed-alert">
+                    <Alert
+                        message="Item added to cart!"
+                        type="success"
+                        showIcon
+                        action={
+                            <Button size="small" type="text">
+                                UNDO
+                            </Button>
+                        }
+                        closable
+                    />
+                </div>}
                 <Container variant={containerVariants.FLEXED} className="gap-[6px] md:mb-[9px] mb-[5px]">
                     <p className="text-red font-medium md:text-base text-[13px]">${current_price}</p>
                     <p className=" line-through text-grey font-medium md:text-base text-[13px]">${available_quantity}</p>

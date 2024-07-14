@@ -1,15 +1,11 @@
 "use client"
-import Container from "@/app/atomic/atoms/container/Container"
-import { containerVariants } from "@/app/variant/variants"
-import SalesCard from "@/app/atomic/templates/SalesCard"
-import HomeLayout from "@/app/atomic/layout/HomeLayout"
+import { useEffect } from "react"
 import Icon from "@/app/atomic/atoms/icon/Icon"
 import { iconVariants } from "@/app/variant/variants"
-// import { BSProdData } from "../../helper/data"
-
-
-import Link from "next/link"
-import { useEffect } from "react"
+import HomeLayout from "@/app/atomic/layout/HomeLayout"
+import SalesCard from "@/app/atomic/templates/SalesCard"
+import { containerVariants } from "@/app/variant/variants"
+import Container from "@/app/atomic/atoms/container/Container"
 import useProductsStore from "@/app/helper/zustand/productsStore"
 
 const BSProducts = () => {
@@ -25,9 +21,11 @@ const BSProducts = () => {
     };
 
     const { products,  fetchProducts} = useProductsStore();
+
     useEffect(() => {
         fetchProducts();
     }, [fetchProducts]);
+
     return (
         <div id="bestsellers">
             <HomeLayout >

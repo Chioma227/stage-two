@@ -10,7 +10,7 @@ const NewIn = () => {
                 <div className='border-l-[15px] h-[100px] flex items-center border-l-orange px-[20px] mt-[30px]'>
                     <p className='text-orange font-semibold'>
                         Featured
-                    </p>
+                    </p> 
                 </div>
                 <h2 className="text-[30px] font-bold text-black90 mt-[10px]">
                     New Arrival

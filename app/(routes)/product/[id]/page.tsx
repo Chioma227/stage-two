@@ -1,18 +1,16 @@
 "use client"
-import Icon from "@/app/atomic/atoms/icon/Icon";
-// import { products } from "@/app/helper/data";
-import { useEffect, useState } from "react";
-import { FiMinus } from "react-icons/fi";
-import { FiPlus } from "react-icons/fi";
 import Link from "next/link";
+import { FiPlus } from "react-icons/fi";
+import { FiMinus } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import Icon from "@/app/atomic/atoms/icon/Icon";
 import Button from "@/app/atomic/atoms/button/Button";
-import { buttonVariants } from "@/app/variant/variants";
-import Header from "@/app/atomic/organisms/header/Header";
-import Footer from "@/app/atomic/organisms/footer/Footer";
-import Container from "@/app/atomic/atoms/container/Container";
-import SalesCard from "@/app/atomic/templates/SalesCard";
-import { containerVariants, iconVariants } from "@/app/variant/variants";
 import Loader from "@/app/atomic/atoms/loader/Loader";
+import { buttonVariants } from "@/app/variant/variants";
+import Footer from "@/app/atomic/organisms/footer/Footer";
+import Header from "@/app/atomic/organisms/header/Header";
+import Container from "@/app/atomic/atoms/container/Container";
+import { containerVariants, iconVariants } from "@/app/variant/variants";
 
 
 interface ProductProps {
@@ -31,7 +29,6 @@ interface ProductProps {
 
 const ProductDetail = ({ params }: { params: { id: string } }) => {
     const [data, setData] = useState<ProductProps | null>(null);
-    
 
     useEffect(() => {
         fetch(`/api/products/${params.id}`)
@@ -41,7 +38,7 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
             .then((data) => {
                 if (data) {
                     setData(data);
-                    
+
                 } else {
                     setData(null);
                 }
@@ -65,9 +62,8 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
         // setTotalPrice(basePrice * Math.max(prevQuantity - 1, 1));
     };
 
-
     if (!data) {
-        return <Loader/>;
+        return <Loader />;
     }
 
     return (

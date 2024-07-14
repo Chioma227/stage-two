@@ -4,11 +4,12 @@ import { buttonVariants } from "@/app/variant/variants"
 interface bProps {
     className?: string,
     variant: buttonVariants,
+    onClick?: ()=> void,
     children: string | React.ReactNode,
-    onClick?: ()=> void
+    type?: "button" | "reset" | "submit" | undefined
 }
 
-const Button = ({ children, onClick, className, variant }: bProps) => {
+const Button = ({ children, onClick, type, className, variant }: bProps) => {
     let style;
     switch (variant) {
         case buttonVariants.DEFAULT:
@@ -33,7 +34,7 @@ const Button = ({ children, onClick, className, variant }: bProps) => {
             break;
     }
     return (
-        <button className={clsx(className, style)} >
+        <button className={clsx(className, style)} onClick={onClick} type={type} >
             {children}
         </button>
     )

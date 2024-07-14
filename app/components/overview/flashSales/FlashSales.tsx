@@ -1,19 +1,17 @@
 "use client"
 import Countdown from './Countdown'
+import { useEffect, useState } from 'react';
 import Icon from '@/app/atomic/atoms/icon/Icon';
-import { buttonVariants, iconVariants } from '@/app/variant/variants';
+import Button from '@/app/atomic/atoms/button/Button';
 import SalesCard from '@/app/atomic/templates/SalesCard';
 import { containerVariants } from '@/app/variant/variants';
 import Container from '@/app/atomic/atoms/container/Container';
-import Button from '@/app/atomic/atoms/button/Button';
-import { useEffect, useState } from 'react';
 import useProductsStore from '@/app/helper/zustand/productsStore';
+import { buttonVariants, iconVariants } from '@/app/variant/variants';
 
 
 const FlashSales = () => {
   const [show, setShow] = useState(false)
-
-  
   const targetDate = new Date('2024-07-17T00:00:00');
 
   const slideLeft = () => {
