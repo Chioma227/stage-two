@@ -1,8 +1,10 @@
+"use client"
 import Button from "@/app/atomic/atoms/button/Button"
 import { buttonVariants } from "@/app/variant/variants"
 import Link from "next/link"
 
 const CartCoupon = () => {
+    const {totalPrice} = useCartStore()
     return (
         <main className="lg:flex md:block justify-between items-baseline mt-[3rem] mb-[5rem]">
             <div className="sm:flex block items-center gap-[10px]">
@@ -17,7 +19,7 @@ const CartCoupon = () => {
             <section className="lg:w-[30%] md:w-[50%] lg:mt-0 mt-[30px] border-2 border-black p-[20px]">
                 <p>Cart Total</p>
                 <div className="flex items-center justify-between border-[#82828267] border-b-2 py-[10px]">
-                    <p>Total:</p>
+                   <p>${totalPrice.toFixed(2)}</p> 
                     <p>$3240</p>
                 </div>
                 <div className="flex items-center justify-between border-[#82828267] border-b-2 py-[10px]">
@@ -26,7 +28,7 @@ const CartCoupon = () => {
                 </div>
                 <div className="flex items-center justify-between  py-[10px]">
                     <p>Total:</p>
-                    <p>$3240</p>
+                      <p>${totalPrice.toFixed(2)}</p> 
                 </div>
                 <Link href="/checkout" className="flex items-center justify-center py-[10px]">
                     <Button variant={buttonVariants.DEFAULT} className="text-white">
