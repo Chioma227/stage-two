@@ -30,18 +30,17 @@ const CheckoutForm = () => {
         return Object.values(inputValues).every((value) => Boolean(value.trim())); 
       };
 
-    const handleSubmit = (e: { preventDefault: any }) => {
-        e.preventDefault
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
         if (isFormValid()) {
-            localStorage.clear()
-            route.push("/")
+            route.push("/thankyou")
         }else{
             setError(true)
         }
     }
     return (
         <main>
-            <form className='lg:flex block m:gap-[7rem] md:gap-[5rem] mb-[40px]'>
+            <form onSubmit={handleSubmit} className='lg:flex block m:gap-[7rem] md:gap-[5rem] mb-[40px]'>
                 <section>
                     <div>
                         <label htmlFor="fName" className='text-[#adadad] text-[14px]'>First Name</label><span className='text-[#df1c4070]'>*</span><br />
@@ -133,7 +132,7 @@ const CheckoutForm = () => {
                                 </Button>
 
                             </div>
-                            <Button type='submit' onClick={()=>handleSubmit} variant={buttonVariants.DEFAULT} className="text-white mt-[20px] mb-[30px] sm:block hidden">
+                            <Button type='submit'  variant={buttonVariants.DEFAULT} className="text-white mt-[20px] mb-[30px] sm:block hidden">
                                 Place Order
                             </Button>
                         </section>
