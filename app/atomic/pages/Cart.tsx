@@ -5,31 +5,12 @@ import Container from "../atoms/container/Container"
 import CartCoupon from "@/app/components/cart/CartCoupon"
 import { buttonVariants, containerVariants } from "@/app/variant/variants"
 import useCartStore from "@/app/helper/zustand/cartStore"
-import { useEffect, useState } from "react"
+import QtyBtn from "../atoms/button/QtyBtn"
 
 
 const Cart = () => {
-  const { cartItems, removeItemFromCart, clearCart } = useCartStore()
-
-  const [totalPrice, setTotalPrice] = useState(0);
-
-
-const calculateCartTotal = () => {
-  const total = cartItems.reduce((acc, currentItem) => {
-    const itemPrice = currentItem?.available_quantity as number || 0; // Handle potential missing price
-    const itemQuantity = currentItem?.available_quantity as number || 1; // Handle potential missing quantity (default to 1)
-    return acc + (itemPrice * itemQuantity);
-  }, 0);
-  setTotalPrice(total);
-};
-
-  useEffect(() => {
-    calculateCartTotal(); 
-    console.log(totalPrice);
-  }, [cartItems]);
-
-
-
+  const { cartItems, removeItemFromCart, clearCart, updateProductQuantity } = useCartStore()
+  
   return (
     <Container variant={containerVariants.WRAPPER}>
       <main>
@@ -76,12 +57,16 @@ const calculateCartTotal = () => {
                         <p className="sm:text-[15px] text-[11px]">{slug.available_quantity}</p>
                       </td>
                       <td className="px-6 py-4 text-black">
-                        <div className="md:text-base sm:text-[15px] text-[11px]">
-                          <input  type="number" className="w-[50px] border border-gray-300 rounded-md indent-1 outline-none" />
+                          <div className="md:text-base flex sm:text-[15px] text-[11px]">
+                          <QtyBtn
+                            updateItem={updateProductQuantity}
+                            itemId={slug.id.toString()}
+                            itemPrice={slug.available_quantity}
+                          />
                         </div>
                       </td>
                       <td className="px-6 py-4 text-black">
-                        <p className="md:text-base sm:text-[15px] text-[11px]">{slug.available_quantity}</p>
+                        <p className="md:text-base sm:text-[15px] text-[11px]">${parseFloat(slug.available_quantity)}</p>
                       </td>
                       <td className="px-6 py-4 text-right">
                         <button onClick={() => removeItemFromCart(slug.id)} className="font-medium text-orange">Remove</button>
