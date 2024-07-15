@@ -1,4 +1,5 @@
 import Button from "@/app/atomic/atoms/button/Button"
+import useCartStore from "@/app/helper/zustand/cartStore"
 import { buttonVariants } from "@/app/variant/variants"
 import Link from "next/link"
 
