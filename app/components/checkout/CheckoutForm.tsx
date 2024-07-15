@@ -9,7 +9,7 @@ import { buttonVariants, containerVariants } from '@/app/variant/variants'
 
 const CheckoutForm = () => {
     const route = useRouter()
-    const { cartItems } = useCartStore()
+    const { cartItems, totalPrice } = useCartStore()
     const {clearCart} = useCartStore()
     const [error, setError] = useState(false)
     const [inputValues, setInputValues] = useState({
@@ -94,7 +94,7 @@ const CheckoutForm = () => {
 
                         <section className="border-b-2 flex items-center justify-between py-[15px] mt-[30px] border-[#82828267]">
                             <p>Subtotal:</p>
-                            <p>$2240</p>
+                           <p>${totalPrice.toFixed(2)}</p> 
                         </section>
                         <section className="border-b-2 py-[15px] border-[#82828267] flex items-center justify-between">
                             <p>Shipping:</p>
