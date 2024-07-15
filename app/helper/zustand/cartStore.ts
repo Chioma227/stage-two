@@ -1,5 +1,3 @@
-import { Product } from "@/app/types";
-import { get } from "http";
 import {create} from "zustand";
 import { persist } from "zustand/middleware";
 
